@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        .searchBox{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            min-height: 100vh;
+            background-color: rgb(192, 190, 190);
+            position: relative;
+        }
+
+        form{
+            margin-top: 200px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #searched{
+            width: 30%;
+            height: 40px;
+            padding: 5px 15px;
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        #searched:hover{
+                border: 2px solid rgb(112, 203, 227);
+        }
+
+
+        button{
+            width: 50px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover{
+            border: 2px solid rgb(112, 203, 227);
+        }
+
+        .result{
+            display: none;
+            width: 500px;
+            height: 200px;
+            position: absolute;
+            top: 400px;
+            right: 450px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            background-color: rgb(232, 219, 219);
+            border-radius: 10px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="searchBox">
+        <form action="#">
+            <input id="searched" type="text" placeholder="Enter user to search">
+            <button type="submit" id="btn">
+                <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </form>
+
+
+    </div>
+    <div class="result"></div>
+
+
+    
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
