@@ -10,8 +10,8 @@ router.get("/:id",getProductById)
 
 router.post("/",checkAuth,checkAdmin,addProducts)
 
-router.put("/:id",updateProduct)
+router.put("/:id",checkAuth,checkAdmin,updateProduct)
 
-router.delete("/:id",deleteProduct)
+router.delete("/:id",checkAuth,checkAdmin,deleteProduct)
 
 export default router;
