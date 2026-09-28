@@ -2,7 +2,7 @@ import mongoose, { Mongoose } from "mongoose";
 
 const orderSchema =  new mongoose.Schema({
     user:{
-        type:Mongoose.Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         required:true,
         ref:"User"
     },
@@ -25,7 +25,7 @@ const orderSchema =  new mongoose.Schema({
             default:1
         },
         product:{
-            type:Mongoose.Schema.Types.ObjectId,
+            type:mongoose.Schema.Types.ObjectId,
             required:true,
             ref:"Product"
         }

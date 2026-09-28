@@ -6,7 +6,7 @@ const checkAuth =  async (req,res,next)=>{
     if(!token) return res.status(401).send({error:"You are not logged in"})
     
     try{
-        const {_id} = jwt.verify(token,"mysecretkey");
+        const {_id} = jwt.verify(token,process.env.JWT_SECRET_KEY);
         const user =  await User.findById(_id)
         req.user = {
             _id:user._id,
